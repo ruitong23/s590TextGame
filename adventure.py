@@ -104,10 +104,10 @@ class Game:
         print(f"> {room['name']}\n")
         print(f"{room['desc']}\n")
         exits = ' '.join(room['exits'])
-        print(f"Exits: {exits}\n")
         if 'items' in room and room['items']:
             items = ' '.join(room['items'])
             print(f"Items: {items}\n")
+        print(f"Exits: {exits}\n")
         if 'monster' in room:
             print(
                 f"Monster: {room['monster']['name']} (Health: {room['monster']['health']})\n")
@@ -138,7 +138,7 @@ class Game:
         if player.inventory:
             print("Inventory:")
             for item in player.inventory:
-                print(f"{item['itemName']}")
+                print(f"  {item['itemName']}")
         else:
             print("You're not carrying anything.")
 
@@ -221,7 +221,7 @@ class Game:
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("python3 adventure.py map.json")
+        print("python3 adventure.py map.map")
         sys.exit(1)
     game = Game(sys.argv[1])
     game.checkMap()
