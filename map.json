@@ -1,0 +1,34 @@
+{
+    "start": "Living Room",
+    "rooms": [
+      {
+        "name": "Living Room",
+        "desc": "The living room you see every day, but there is a monster in there now",
+        "exits": {
+          "north": "Kitchen",
+          "east": "Library"
+        },
+        "items": ["remote"],
+        "monster": {"name": "Goblin", "health": 30}
+        
+      },
+      {
+        "name": "Kitchen",
+        "desc": "A clean kitchen with a token flooting in the middle of the room. Seems like it comes with the monster",
+        "exits": {
+          "south": "Living Room"
+        },
+        "items": ["cookie", "knife"],
+        "token": ["enhance"]
+      },
+      {
+        "name": "Library",
+        "desc": "Just a small Library with books Nothing to see here",
+        "exits": {
+          "west": "Living Room"
+        },
+        "items": ["book", "lamp"]
+      }
+    ]
+  }
+  
