@@ -105,7 +105,7 @@ class Game:
         print(f"{room['desc']}\n")
         exits = ' '.join(room['exits'])
         if 'items' in room and room['items']:
-            items = ' '.join(room['items'])
+            items = ', '.join(room['items'])
             print(f"Items: {items}\n")
         print(f"Exits: {exits}\n")
         if 'monster' in room:
